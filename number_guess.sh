@@ -2,7 +2,7 @@
 
 PSQL="psql --username=freecodecamp --dbname=number_guess -t --no-align -c"
 
-# Generate random number between 1 and 1000
+# Generate random number between 1 and 1000.
 SECRET_NUMBER=$(( RANDOM % 1000 + 1 ))
 
 # Prompt for username
