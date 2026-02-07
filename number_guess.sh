@@ -18,7 +18,7 @@ then
   echo "Welcome, $USERNAME! It looks like this is your first time here."
   INSERT_USER_RESULT=$($PSQL "INSERT INTO users(username) VALUES('$USERNAME')")
 else
-  # Returning user
+  # Returning user.
   IFS="|" read GAMES_PLAYED BEST_GAME <<< "$USER_DATA"
   echo "Welcome back, $USERNAME! You have played $GAMES_PLAYED games, and your best game took $BEST_GAME guesses."
 fi
