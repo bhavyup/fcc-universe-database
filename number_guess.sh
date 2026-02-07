@@ -14,7 +14,7 @@ USER_DATA=$($PSQL "SELECT games_played, best_game FROM users WHERE username='$US
 
 if [[ -z $USER_DATA ]]
 then
-  # New user
+  # New user.
   echo "Welcome, $USERNAME! It looks like this is your first time here."
   INSERT_USER_RESULT=$($PSQL "INSERT INTO users(username) VALUES('$USERNAME')")
 else
